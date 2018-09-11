@@ -16,17 +16,17 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:scrollbarStyle="outsideOverlay"
-            android:paddingTop="116dp"
+            android:paddingTop="@dimen/recyclerview_padding_top"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingBottom="28dp" />
+            android:paddingBottom="@dimen/recyclerview_padding_bottom" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:elevation="8dp"
+        android:layout_height="@dimen/main_activity_app_bar_height"
+        android:elevation="@dimen/app_bar_elevation"
         app:theme="@style/Theme.ToolBar"
         android:fitsSystemWindows="true">
         <android.support.design.widget.CollapsingToolbarLayout
@@ -36,17 +36,18 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/theme_primary"
-            app:expandedTitleMarginStart="48dp"
-            app:expandedTitleMarginEnd="64dp"
+            android:background="@color/theme_primary"
+            app:expandedTitleMarginStart="@dimen/collapsing_toolbar_margin_start"
+            app:expandedTitleMarginEnd="@dimen/collapsing_toolbar_margin_end"
             >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            app:popupTheme="@style/Theme.ToolBar"
             android:layout_marginLeft="@dimen/list_toolbar_side_margin"
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:layout_gravity="bottom">
 
             <ImageView
